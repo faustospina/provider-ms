@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "CLIENTE-MS",
+			"name": "PROVIDER-MS",
 			"item": [
 				{
 					"name": "MOVIMIENTOS",
@@ -19,7 +19,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nomeroCuenta\": \"495878\",\r\n    \"tipoMovimiento\": \"DEPOSITO\",\r\n    \"valor\": 200\r\n}",
+									"raw": "{\r\n    \"nomeroCuenta\": \"478758\",\r\n    \"tipoMovimiento\": \"DEPOSITO\",\r\n    \"valor\": 200\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -126,7 +126,7 @@
 			]
 		},
 		{
-			"name": "CUENTA-MS",
+			"name": "CONSUMER-MS",
 			"item": [
 				{
 					"name": "REPORTES",
@@ -137,7 +137,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://{{HOST}}:{{PORT-CUENTA-MS}}/reportes?clienteId=6&fechaInicio=2024-10-20&fechaFin=2024-10-23",
+									"raw": "http://{{HOST}}:{{PORT-CUENTA-MS}}/reportes?clienteId=1&fechaInicio=2024-10-20&fechaFin=2024-10-30",
 									"protocol": "http",
 									"host": [
 										"{{HOST}}"
@@ -149,7 +149,7 @@
 									"query": [
 										{
 											"key": "clienteId",
-											"value": "6"
+											"value": "1"
 										},
 										{
 											"key": "fechaInicio",
@@ -157,7 +157,7 @@
 										},
 										{
 											"key": "fechaFin",
-											"value": "2024-10-23"
+											"value": "2024-10-30"
 										}
 									]
 								}
@@ -184,7 +184,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{HOST}}:{{PORT-CUENTA-MS}}/cuentas/cliente/3",
+									"raw": "http://{{HOST}}:{{PORT-CUENTA-MS}}/cuentas/cliente/1",
 									"protocol": "http",
 									"host": [
 										"{{HOST}}"
@@ -193,7 +193,7 @@
 									"path": [
 										"cuentas",
 										"cliente",
-										"3"
+										"1"
 									]
 								}
 							},
