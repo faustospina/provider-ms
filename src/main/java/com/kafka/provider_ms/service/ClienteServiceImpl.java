@@ -6,22 +6,20 @@ import com.kafka.provider_ms.model.dto.ClienteDTO;
 import com.kafka.provider_ms.model.entities.Cliente;
 import com.kafka.provider_ms.model.mapper.ClienteMapper;
 import com.kafka.provider_ms.repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.stream.Collectors;
-
+@RequiredArgsConstructor
 @Service
 public class ClienteServiceImpl implements ClienteService{
 
-    @Autowired
-    private ClienteRepository repository;
 
+    private final ClienteRepository repository;
 
-    @Autowired
-    private ClienteMapper mapper;
+    private final ClienteMapper mapper;
 
 
     @Override

@@ -2,16 +2,17 @@ package com.kafka.provider_ms.controller;
 
 import com.kafka.provider_ms.model.dto.ClienteDTO;
 import com.kafka.provider_ms.service.ClienteService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("clientes")
 public class ClienteController {
 
-    @Autowired
-    private ClienteService service;
+
+    private final ClienteService service;
 
     @PostMapping
     public ResponseEntity<Object> createCliente(@RequestBody ClienteDTO request){
